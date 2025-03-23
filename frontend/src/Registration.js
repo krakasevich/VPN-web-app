@@ -26,8 +26,35 @@ function RegisterPage() {
         return true;
     }
 
-    const handleRegister = () => {
+    const handleRegister = async () => {
         if (!validateForm()) return;
+
+        try {
+            const response = await fetch('http://localhost:8000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setMessage("Registration successful!");
+                setTimeout(() => {
+                    navigate("/login");
+                }, 2000);
+            } else {
+                setMessage(data.detail || "Registration failed");
+            }
+        } catch (error) {
+            setMessage("Error connecting to server");
+            console.error('Error:', error);
+        }
     };
   
     return (
