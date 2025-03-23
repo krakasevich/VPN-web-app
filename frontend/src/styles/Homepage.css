@@ -31,12 +31,15 @@
     margin-top: 30px;
     border: none;
     font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_get_started:hover {
-    background-color: #54e2b0;
+    background-color: #3fb589;
+    transform: translateY(-2px);
 }
 
 .choose_secureNet_section h2 {
@@ -61,7 +64,7 @@
     color: #ebe9e9;
     text-align: center;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .point p {
@@ -70,4 +73,5 @@
 
 .point:hover {
     background-color: rgba(53, 52, 52, 0.95);
+    transform: translateY(-2px);
 }

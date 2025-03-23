@@ -12,7 +12,7 @@ function HomePage() {
     return (
       <div className='home_page'>
         <div className='home_info'>
-          <h1 className='main_headline'>SecureNet — bezpieczeństwo w sieci dla każdego</h1>
+          <h1 className='main_headline'>SecureNet — network security for everyone</h1>
           <p className='headline'>
             Browse safely and anonymously with our high-speed VPN service.
             Protect your data across all your devices with just one click.
