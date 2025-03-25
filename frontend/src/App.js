@@ -4,6 +4,7 @@ import './styles/Global.css'
 import HomePage from "./Homepage";
 import RegisterPage from "./Registration";
 import Login from "./Login";
+import VPN from "./VPN";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/registration" element={<RegisterPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/vpn" element={<VPN />} />
         </Routes>
       </Router>
     </div>

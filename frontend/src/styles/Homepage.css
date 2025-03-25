@@ -32,7 +32,7 @@
 .btn_login {
     width: 200px;
     background-color: #4cd0a1;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 15px;
     margin-top: 30px;
     border: none;
@@ -46,7 +46,7 @@
 .btn_get_started {
     width: 200px;
     background-color: #4cd0a1;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 15px;
     margin-top: 30px;
     border: none;

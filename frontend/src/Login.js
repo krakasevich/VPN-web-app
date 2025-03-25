@@ -26,8 +26,37 @@ function Login () {
         return true;
     }
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (!validateForm()) return;
+
+        try {
+            const response = await fetch("http://localhost:8000/login",
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify ({
+                    username: username,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setMessage("Login successful");
+                localStorage.setItem('user', JSON.stringify({username}));
+                setTimeout(() => {
+                    navigate("/vpn");
+                }, 1000);
+            } else {
+                setMessage(data.detail || "User not found. Please register first!");
+            }
+        } catch (error) {
+            setMessage("Error connecting to server");
+            console.error('Error:', error);
+        }
     };
 
     return (

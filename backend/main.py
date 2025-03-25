@@ -44,13 +44,12 @@ def register_user(user: UserCreate, db: Session = Depends(get_db)):
     # Hashing the password
     hashed_password = hashlib.sha256(user.password.encode()).hexdigest()
     
-    # Создаем нового пользователя
+    # Creating a new user
     db_user = models.User(
         username=user.username,
         password=hashed_password
     )
     
-    # Creating a new user
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
