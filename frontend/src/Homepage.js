@@ -8,6 +8,10 @@ function HomePage() {
     const handleGetStarted = () => {
       navigate("/registration");
     };
+
+    const handleLogin = () => {
+      navigate("/login")
+    }
   
     return (
       <div className='home_page'>
@@ -17,7 +21,11 @@ function HomePage() {
             Browse safely and anonymously with our high-speed VPN service.
             Protect your data across all your devices with just one click.
           </p>
-          <button className="btn_get_started" onClick={handleGetStarted}>Get Started</button>
+          <div className="btns_authentication">
+            <button className="btn_get_started" onClick={handleGetStarted}>Get Started</button>
+            <button className="btn_login" onClick={handleLogin}>Login</button>
+          </div>
+          
         </div>
 
         <div className="choose_secureNet_section">
