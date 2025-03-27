@@ -45,9 +45,10 @@ function RegisterPage() {
 
             if (response.ok) {
                 setMessage("Registration successful!");
+                localStorage.setItem('user', JSON.stringify({ username }));
                 setTimeout(() => {
-                    navigate("/login");
-                }, 2000);
+                    navigate("/vpn");
+                }, 1000);
             } else {
                 setMessage(data.detail || "Registration failed");
             }

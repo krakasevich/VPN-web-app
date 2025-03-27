@@ -66,6 +66,35 @@
     margin-bottom: 1rem;
 }
 
+.location_selector {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location_selector label {
+    color: #333;
+    font-weight: 500;
+}
+
+.location_dropdown {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.location_dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
 .connect_button {
     width: 200px;
     background-color: #4cd0a1;
