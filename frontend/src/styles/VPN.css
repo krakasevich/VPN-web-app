@@ -13,7 +13,6 @@
     background-color: rgba(45, 43, 43, 0.95);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* border: #4cd0a1 solid 1px; */
 }
 
 .vpn_header h1 {
@@ -43,7 +42,6 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* border: #4cd0a1 solid 1px; */
 }
 
 .vpn_content h2 {
@@ -57,7 +55,6 @@
     padding: 1rem;
     background-color: #4E4E4E;
     border-radius: 5px;
-    /* border: #4cd0a1 solid 1px; */
 }
 
 .vpn_status p {
@@ -75,24 +72,44 @@
 }
 
 .location_selector label {
-    color: #333;
+    color: #b8b7b7;
     font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
 .location_dropdown {
-    padding: 0.5rem;
+    padding: 0.8rem 1.2rem;
     font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: white;
+    border: 2px solid #4cd0a1;
+    border-radius: 8px;
+    background-color: #4E4E4E;
+    color: #ebe9e9;
     cursor: pointer;
-    min-width: 200px;
+    min-width: 250px;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234cd0a1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
 }
 
 .location_dropdown:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+    border-color: #4cd0a1;
+    box-shadow: 0 0 0 3px rgba(76, 208, 161, 0.2);
+}
+
+.location_dropdown:hover {
+    border-color: #3fb589;
+}
+
+.location_dropdown option {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #4E4E4E;
+    color: #ebe9e9;
 }
 
 .connect_button {
@@ -117,7 +134,6 @@
     padding: 1rem;
     background-color: #4E4E4E;
     border-radius: 5px;
-    /* border: #4cd0a1 solid 1px; */
 }
 
 .vpn_info h3 {
